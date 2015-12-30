@@ -23,6 +23,27 @@ go get github.com/codegangsta/cli
 
 # Samples to Run
 
+Help
+```
+go run filelister.go help
+```
+
+This uses my short-code command line parameters
+```
+go run filelister.go -p ~/projects/foo -r -c -o yaml
+```
+
+Same command but with long command line parameter names
+```
+go run filelister.go --path ~/projects/foo --recursive --color --output yaml
+```
+
+Output JSON
+```
+go run filelister.go --path ~/projects/foo --recursive --color -ouput json
+```
+
+
 
 
 
