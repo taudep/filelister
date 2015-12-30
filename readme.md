@@ -35,12 +35,12 @@ go run filelister.go -p ~/projects/foo -r -c -o yaml
 
 Same command but with long command line parameter names
 ```
-go run filelister.go --path ~/projects/foo --recursive --color --output yaml
+go run filelister.go --path ~/projects/foo --recursive --output yaml
 ```
 
 Output JSON
 ```
-go run filelister.go --path ~/projects/foo --recursive --color --ouput json
+go run filelister.go --path ~/projects/foo --recursive --ouput json
 ```
 
 
