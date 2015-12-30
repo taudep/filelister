@@ -1,0 +1,47 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;filelister&gt;">
+    <CLASSES>
+      <root url="file://$USER_HOME$/dev/src/github.com" />
+      <root url="file://$USER_HOME$/dev/src/golang.org" />
+      <root url="file://$USER_HOME$/dev/src/.DS_Store" />
+      <root url="file://$USER_HOME$/dev/src/gopkg.in" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <excluded>
+      <root url="file://$USER_HOME$/dev/src/github.com/nsf/gocode/_goremote" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/go/ssa/interp/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/go/gcimporter/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/refactor/eg/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/cmd/cover/testdata" />
+      <root url="file://$USER_HOME$/dev/src/gopkg.in/mgo.v2/.git" />
+      <root url="file://$USER_HOME$/dev/src/github.com/nsf/gocode/_testing" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/.git" />
+      <root url="file://$USER_HOME$/dev/src/github.com/codegangsta/cli/.git" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/go/gccgoimporter/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/go/ssa/ssautil/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/net/html/charset/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/cmd/stringer/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/go/loader/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/net/http2/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/cmd/callgraph/testdata" />
+      <root url="file://$USER_HOME$/dev/src/github.com/nsf/gocode/.git" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/cmd/fiximports/testdata" />
+      <root url="file://$PROJECT_DIR$" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tour/.git" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/go/pointer/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/oracle/testdata" />
+      <root url="file://$USER_HOME$/dev/src/gopkg.in/yaml.v2/.git" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/go/types/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/cmd/bundle/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/go/ssa/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/net/.git" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/cmd/vet/testdata" />
+      <root url="file://$USER_HOME$/dev/src/github.com/taudep/filelister/.git" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/go/callgraph/cha/testdata" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/net/html/testdata" />
+      <root url="file://$USER_HOME$/dev/src/github.com/nsf/gocode/_gccgo" />
+      <root url="file://$USER_HOME$/dev/src/golang.org/x/tools/go/callgraph/rta/testdata" />
+    </excluded>
+  </library>
+</component>
