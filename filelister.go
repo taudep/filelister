@@ -108,7 +108,7 @@ func doIt(rootpath string, isRecursive bool, outputType string) {
 	rootnode := convertFileInfoToFormatted(fileInfo)
 	output, _ := buildDirTree(rootpath, &rootnode, isRecursive)
 
-	// Now Ouptput the results
+	// Now output the results
 	switch outputType {
 	case "yaml":
 		outputAsYAML(*output)
@@ -140,7 +140,6 @@ func outputAsYAML(root FileInfoFormat) {
 }
 
 func outputAsText(root FileInfoFormat, indent int) {
-	//fmt.Println(terminalutil.FormatGreen(fmt.Sprintf("entering dumpFileNodes %s@%p children: %d IsDir:%v indent:%d", root.Name, &root, len(root.Children), root.IsDir, indent)))
 	for _, file := range root.Children {
 		if file.IsDir == true {
 			fmt.Printf(terminalutil.FormatBlue(fmt.Sprintf("%s %s/\n", strings.Repeat(" ", 2*indent), file.Name)))
@@ -211,15 +210,6 @@ func readFileInfo(path string) os.FileInfo {
 }
 
 func buildDirTree(path string, parent *FileInfoFormat, recursive bool) (*FileInfoFormat, error) {
-
-	//	dumpChildren := func(children []FileInfoFormat) {
-	//		fmt.Println("<Dump Children>")
-	//		for _, fif := range children {
-	//			fmt.Println(terminalutil.FormatYellow(fmt.Sprintf("%s @  %p", fif.Name, &fif)))
-	//		}
-	//		fmt.Println("</Dump Children>")
-	//	}
-
 	files, err := ioutil.ReadDir(path)
 	if err != nil {
 		terminalutil.PrintError("Error reading directories", err)
@@ -228,18 +218,15 @@ func buildDirTree(path string, parent *FileInfoFormat, recursive bool) (*FileInf
 
 	for _, fileInfo := range files {
 		if fileInfo.IsDir() == true && recursive == true {
-			// fmt.Printf("Creating and Adding New Child: %s@%p to parent: %s at %p\n", newChild.Name, &newChild, parent.Name, &parent)
 			newPath := filepath.Join(path, fileInfo.Name())
 			fileInfo := readFileInfo(newPath)
 			newChild := convertFileInfoToFormatted(fileInfo)
-			buildDirTree(newPath, &newChild, true) //
+			buildDirTree(newPath, &newChild, true)
 			numberPathsTraversed += 1
 			parent.Children = append(parent.Children, newChild)
 		} else {
 			convertedFile := convertFileInfoToFormatted(fileInfo)
-			//fmt.Printf("Adding File: %s@%p to parent: %s at %p\n", convertedFile.Name, &convertedFile, parent.Name, &parent)
 			parent.Children = append(parent.Children, convertedFile)
-			//fmt.Println(terminalutil.FormatBlue(fmt.Sprintf("parrent.Children: %d\n", len(parent.Children))))
 			numberFilesListed += 1
 		}
 	}
