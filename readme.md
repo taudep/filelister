@@ -30,7 +30,8 @@ go run filelister.go help
 
 This uses my short-code command line parameters
 ```
-go run filelister.go -p ~/projects/foo -r -c -o yaml
+go run filelister.go -p ~/projects/foo -r -c
+go run filelister.go -p ~/projects/foo -r -o yaml
 ```
 
 Same command but with long command line parameter names
