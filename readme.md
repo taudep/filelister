@@ -40,7 +40,7 @@ go run filelister.go --path ~/projects/foo --recursive --color --output yaml
 
 Output JSON
 ```
-go run filelister.go --path ~/projects/foo --recursive --color -ouput json
+go run filelister.go --path ~/projects/foo --recursive --color --ouput json
 ```
 
 
