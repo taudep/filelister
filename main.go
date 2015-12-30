@@ -84,13 +84,13 @@ func main() {
 	}
 
 	app.Action = func(c *cli.Context) {
+		//	 The default Action to perform
 		if rootpath == "" {
 			fmt.Println("Path is required")
 			os.Exit(1)
 		}
 
-		// Enable option colors for making your terinal pretty
-		fmt.Printf("Use colors %v" , useColors)
+		// Enable option colors for making your terminal pretty
 		terminalutil.EnableColors(useColors)
 
 		println("Reading files from " + rootpath)
@@ -102,7 +102,6 @@ func main() {
 
 // The main entry point for executing the filelister program
 func doIt(rootpath string, isRecursive bool, outputType string) {
-
 
 	// buildFileTree first builds a structure of FileInfo elements
 	fileInfo := readFileInfo(rootpath)
@@ -144,13 +143,13 @@ func outputAsText(root FileInfoFormat, indent int) {
 	//fmt.Println(terminalutil.FormatGreen(fmt.Sprintf("entering dumpFileNodes %s@%p children: %d IsDir:%v indent:%d", root.Name, &root, len(root.Children), root.IsDir, indent)))
 	for _, file := range root.Children {
 		if file.IsDir == true {
-			fmt.Printf(terminalutil.FormatBlue(fmt.Sprintf("%s %s/\n", strings.Repeat(" ", 2 * indent), file.Name)))
+			fmt.Printf(terminalutil.FormatBlue(fmt.Sprintf("%s %s/\n", strings.Repeat(" ", 2*indent), file.Name)))
 			indent++
 			outputAsText(file, indent)
 		} else if file.IsLink == true {
-			fmt.Printf(terminalutil.FormatYellow(fmt.Sprintf("%s %s* (%s)\n", strings.Repeat(" ", 2 * indent), file.Name, file.LinksTo)))
-		}else {
-			fmt.Printf("%s %s\n", strings.Repeat(" ", 2 * indent), file.Name)
+			fmt.Printf(terminalutil.FormatYellow(fmt.Sprintf("%s %s* (%s)\n", strings.Repeat(" ", 2*indent), file.Name, file.LinksTo)))
+		} else {
+			fmt.Printf("%s %s\n", strings.Repeat(" ", 2*indent), file.Name)
 		}
 	}
 }
