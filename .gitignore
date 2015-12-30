@@ -6,6 +6,10 @@
 .AppleDouble
 .LSOverride
 
+#IntelliJ Files
+.idea
+
+
 # Icon must end with two \r
 Icon
 
